@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tree string="Conceptos Especiales a Incluir en el recibo">
+    <field name="concepto"/>
+    <field name="valor"/>   
+</tree>

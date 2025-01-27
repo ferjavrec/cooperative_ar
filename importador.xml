@@ -16,7 +16,7 @@
         </record>
 
 
-        <menuitem name="Importador de Recibos"
+        <menuitem name="Importar Recibos"
             parent="menu_recibo_form"
             action="act_wizard_importador_recibos"
             icon="tryton-list"

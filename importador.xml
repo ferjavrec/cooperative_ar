@@ -12,7 +12,7 @@
         <record model="ir.action.wizard" id="act_wizard_importador_recibos">
             <field name="name">Importador de Recibos</field>
             <field name="wiz_name">cooperative.partner.recibo.importador</field>
-            <field name="model">cooperative.partner.recibo</field>
+            <!--<field name="model">cooperative.partner.recibo</field>-->
         </record>
 
 

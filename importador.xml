@@ -21,8 +21,7 @@
             action="act_wizard_importador_recibos"
             icon="tryton-list"
             id="menu_importador_recibos"
-            sequence="100"
-        />
+            sequence="100"/>
 
 
     </data>

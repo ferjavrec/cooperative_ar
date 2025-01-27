@@ -9,7 +9,7 @@
         </record>
 
 
-        <record model="ir.action.wizard" id="act_wizard_importador_recibos">
+        <record model="ir.action.wizard" id="wizard_importador_recibos">
             <field name="name">Importador de Recibos</field>
             <field name="wiz_name">cooperative.partner.recibo.importador</field>
             <!--<field name="model">cooperative.partner.recibo</field>-->
@@ -18,7 +18,7 @@
 
         <menuitem name="Importar Recibos"
             parent="menu_recibo_form"
-            action="act_wizard_importador_recibos"
+            action="wizard_importador_recibos"
             icon="tryton-list"
             id="menu_importador_recibos"
             sequence="100"/>

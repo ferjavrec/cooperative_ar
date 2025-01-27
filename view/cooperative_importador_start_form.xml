@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<form string="Importador de Recibos" col="2">
+    <label name="company"/>
+    <field name="company"/>
+    <label name="fecha"/>
+    <field name="fecha"/>
+    <label name="periodo"/>
+    <field name="periodo"/>
+    <label name="archivo"/>
+    <field name="archivo"/>
+</form>

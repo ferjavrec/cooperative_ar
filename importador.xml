@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<tryton>
+    <data>
+
+        <record model="ir.ui.view" id="cooperative_partner_recibo_importador_start_view_form">
+            <field name="model">cooperative.partner.recibo.importador.start</field>
+            <field name="type">form</field>
+            <field name="name">cooperative_importador_start_form</field>
+        </record>
+
+
+        <record model="ir.action.wizard" id="act_wizard_importador_recibos">
+            <field name="name">Importador de Recibos</field>
+            <field name="wiz_name">cooperative.partner.recibo.importador</field>
+            <field name="model">cooperative.partner.recibo</field>
+        </record>
+
+
+        <menuitem name="Importador de Recibos"
+            parent="menu_recibo_form"
+            action="act_wizard_importador_recibos"
+            icon="tryton-list"
+            id="menu_importador_recibos"
+            sequence="100"
+        />
+
+    </data>
+</tryton>

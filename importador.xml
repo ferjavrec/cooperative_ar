@@ -15,7 +15,7 @@
             <field name="model">cooperative.partner.recibo</field>
         </record>
 
-        <!--
+
         <menuitem name="Importador de Recibos"
             parent="menu_recibo_form"
             action="act_wizard_importador_recibos"
@@ -23,7 +23,7 @@
             id="menu_importador_recibos"
             sequence="100"
         />
-        -->
+
 
     </data>
 </tryton>

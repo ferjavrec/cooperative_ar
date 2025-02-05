@@ -54,6 +54,13 @@ class ImportadorRecibos(Wizard):
         except ValueError:
             return None
 
+    def es_entero(self, valor):
+        try:
+            int(valor)
+            return True
+        except ValueError:
+            return False
+
     def transition_importar(self):
         archivo = StringIO.StringIO(self.start.archivo)
         periodo_liquidado = self.start.periodo
@@ -62,16 +69,19 @@ class ImportadorRecibos(Wizard):
 
         spamreader = csv.reader(archivo, delimiter=';')
         for row in spamreader:
-            partner = self.get_socio_id(row[0])
-            amount = self.guardar_valor(row[1])
+            socio_nro = row[0]
 
-            if partner:
-                lineas = Pool().get('cooperative.partner.recibo')()
-                lineas.partner = partner
-                lineas.company = company
-                lineas.periodo_liquidado = periodo_liquidado
-                lineas.amount = amount
-                lineas.date = fecha
-                lineas.save()
+            if self.es_entero(socio_nro):
+                partner = self.get_socio_id(socio_nro)
+                amount = self.guardar_valor(row[1])
+
+                if partner:
+                    lineas = Pool().get('cooperative.partner.recibo')()
+                    lineas.partner = partner
+                    lineas.company = company
+                    lineas.periodo_liquidado = periodo_liquidado
+                    lineas.amount = amount
+                    lineas.date = fecha
+                    lineas.save()
 
         return 'end'
